@@ -9,7 +9,11 @@ child = exec(__dirname+'//node_modules//.bin//ng  build', function(error,stdout,
       console.log(error.stack); 
     
       }
-      const express = require('express');
+
+  });
+} 
+build();
+const express = require('express');
         
 const port=process.env.PORT || 3000
 
@@ -18,8 +22,3 @@ const app=express();
 
 app.use(express.static("dist"))
 app.listen(port,function(){console.log('server started')});
-
-  });
-} 
-build();
-
